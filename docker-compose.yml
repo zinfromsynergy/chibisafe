@@ -25,7 +25,7 @@ services:
             ROUTE_PREFIX: /api
             RATE_LIMIT_WINDOW: 2
             RATE_LIMIT_MAX: 5
-            SECRET: #"wowfcgMHqZHwOIMLadWrKu3liyqPOOILpDLSDvuxq3YGhJmiZXJCVpnF96l11WfR" <--- "openssl rand -base64 32" To Generate.
+            SECRET: ""
             MAX_LINKS_PER_ALBUM: 5
             META_THEME_COLOR: "#20222b"
             META_DESCRIPTION: "Blazing fast file uploader 🚀"
@@ -44,8 +44,8 @@ services:
             GENERATED_ALBUM_LENGTH: 6
             PUBLIC_MODE: "false"
             USER_ACCOUNTS: "true"
-            ADMIN_ACCOUNT: #"admin"
-            ADMIN_PASSWORD: #"admin"
+            ADMIN_ACCOUNT: ""
+            ADMIN_PASSWORD: ""
             DB_CLIENT: "sqlite3" #You probably should be running a external DB, but there is one already part of the container. Also there is an issue with Chibisafe duplicating db entries in docker, but seems to work fine in production.
             DB_HOST: ""
             DB_USER: ""
