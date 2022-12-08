@@ -33,7 +33,7 @@ services:
             META_TWITTER_HANDLE: "none :)"
             BLOCKED_EXTENSIONS: ".msi"
             SERVER_PORT: 5000
-            DOMAIN: "https://safe.rapph.dev" #Change this to the domain you are hosting this on or you will get network errors when trying to login.
+            DOMAIN: "https://tempocraft.xyz" #Change this to the domain you are hosting this on or you will get network errors when trying to login.
             SERVICE_NAME: rapphsafe
             MAX_SIZE: 72727
             GENERATE_THUMBNAILS: "true"
