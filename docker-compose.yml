@@ -4,7 +4,6 @@ networks: #Add to my Nginx Network in Docker. Not really needed just makes life 
     traefik_net:
           name: traefik_net
           external: true
-
 services:
     chibisafe:
         build:
@@ -19,6 +18,8 @@ services:
             - 5051:5000
         hostname: tempocraft
         restart: unless-stopped
+        networks:
+            - traefik_net
         environment:
             OVERWRITE_SETTINGS: "true"
             CHUNK_SIZE: 90
@@ -34,7 +35,7 @@ services:
             BLOCKED_EXTENSIONS: ".msi"
             SERVER_PORT: 5000
             DOMAIN: "https://tempocraft.xyz" #Change this to the domain you are hosting this on or you will get network errors when trying to login.
-            SERVICE_NAME: tempocraft.xyz
+            SERVICE_NAME: rapphsafe
             MAX_SIZE: 72727
             GENERATE_THUMBNAILS: "true"
             GENERATE_ZIPS: "true"
