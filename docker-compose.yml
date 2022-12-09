@@ -24,7 +24,7 @@ labels:
      - "traefik.http.routers.chibisafe.tls=true"
      - "traefik.http.routers.chibisafe.tls.certresolver=letsencrypt"
      - "traefik.http.services.chibisafe.loadbalancer.server.port=80"
-	 
+
         hostname: tempocraft
         restart: unless-stopped
         environment:
