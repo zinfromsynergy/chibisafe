@@ -17,13 +17,7 @@ services:
             - ./chibisafe-database:/usr/chibisafe/database
         ports: #You still should have a reverse proxy pointing to the container. Connecting to it through localhost or any other means might/will probably give you issues.
             - 5051:5000
-labels:
-     - "traefik.enable=true"
-     - "traefik.http.routers.chibisafe.entrypoints=https"
-     - "traefik.http.routers.chibisafe.rule=Host(`tempocraft.xyz`)"
-     - "traefik.http.routers.chibisafe.tls=true"
-     - "traefik.http.routers.chibisafe.tls.certresolver=letsencrypt"
-     - "traefik.http.services.chibisafe.loadbalancer.server.port=80"
+		
         hostname: tempocraft
         restart: unless-stopped
         environment:
@@ -58,3 +52,11 @@ labels:
             DB_USER: ""
             DB_PASSWORD: ""
             DB_DATABASE: ""
+			
+		labels:
+    		 - "traefik.enable=true"
+    		 - "traefik.http.routers.chibisafe.entrypoints=https"
+    		 - "traefik.http.routers.chibisafe.rule=Host(`tempocraft.xyz`)"
+    		 - "traefik.http.routers.chibisafe.tls=true"
+     		 - "traefik.http.routers.chibisafe.tls.certresolver=letsencrypt"
+    		 - "traefik.http.services.chibisafe.loadbalancer.server.port=80"
