@@ -16,8 +16,8 @@ services:
             - ./chibisafe-database:/usr/chibisafe/database
         ports: #You still should have a reverse proxy pointing to the container. Connecting to it through localhost or any other means might/will probably give you issues.
             - 80:5000
-expose:
-- 80
+			expose:
+			- 80
         hostname: tempocraft
         restart: unless-stopped
         networks:
