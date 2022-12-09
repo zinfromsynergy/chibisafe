@@ -34,7 +34,7 @@ services:
             BLOCKED_EXTENSIONS: ".msi"
             SERVER_PORT: 5000
             DOMAIN: "https://tempocraft.xyz" #Change this to the domain you are hosting this on or you will get network errors when trying to login.
-            SERVICE_NAME: rapphsafe
+            SERVICE_NAME: tempocraft.xyz
             MAX_SIZE: 72727
             GENERATE_THUMBNAILS: "true"
             GENERATE_ZIPS: "true"
