@@ -4,13 +4,6 @@ networks: #Add to my Nginx Network in Docker. Just makes life easier for me, and
     default:
         external:
             name: "traefik_net"
-labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.chibisafe.entrypoints=https"
-      - "traefik.http.routers.chibisafe.rule=Host(`tempocraft.xyz`)"
-      - "traefik.http.routers.chibisafe.tls=true"
-      - "traefik.http.routers.chibisafe.tls.certresolver=letsencrypt"
-      - "traefik.http.services.chibisafe.loadbalancer.server.port=80"
 
 services:
     chibisafe:
@@ -24,7 +17,14 @@ services:
             - ./chibisafe-database:/usr/chibisafe/database
         ports: #You still should have a reverse proxy pointing to the container. Connecting to it through localhost or any other means might/will probably give you issues.
             - 5051:5000
-        hostname: chibisafe
+		labels:
+      		- "traefik.enable=true"
+      		- "traefik.http.routers.chibisafe.entrypoints=https"
+      		- "traefik.http.routers.chibisafe.rule=Host(`tempocraft.xyz`)"
+      		- "traefik.http.routers.chibisafe.tls=true"
+      		- "traefik.http.routers.chibisafe.tls.certresolver=letsencrypt"
+      		- "traefik.http.services.chibisafe.loadbalancer.server.port=80"
+        hostname: tempocraft
         restart: unless-stopped
         environment:
             OVERWRITE_SETTINGS: "true"
