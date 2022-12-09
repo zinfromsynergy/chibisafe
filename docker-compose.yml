@@ -1,9 +1,9 @@
 version: "3.7"
 
-networks: #Add to my Nginx Network in Docker. Just makes life easier for me, and you may need to change this depending on what reverse proxy you are using.
-    default:
-        external:
-            name: "traefik_net"
+networks: #Add to my Nginx Network in Docker. Not really needed just makes life easier for me.
+    traefik_net:
+          name: traefik_net
+          external: true
 
 services:
     chibisafe:
