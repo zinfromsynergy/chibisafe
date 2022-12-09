@@ -7,7 +7,7 @@ networks: #Add to my Nginx Network in Docker. Just makes life easier for me, and
 labels:
       - "traefik.enable=true"
       - "traefik.http.routers.chibisafe.entrypoints=https"
-      - "traefik.http.routers.chibisafe.rule=Host(`tempocraft.xyz`)
+      - "traefik.http.routers.chibisafe.rule=Host(`tempocraft.xyz`)"
       - "traefik.http.routers.chibisafe.tls=true"
       - "traefik.http.routers.chibisafe.tls.certresolver=letsencrypt"
       - "traefik.http.services.chibisafe.loadbalancer.server.port=80"
