@@ -6,7 +6,7 @@
 		<div class="leftSpacer">
 			<div class="mainBlock">
 				<div>
-					<h4>Blazing fast file uploader. For real.</h4>
+					<h4>Blazing fast file uploader. 🚀</h4>
 					<p>
 						A <strong>modern</strong> and self-hosted file upload service that can handle anything you throw at it.
 					</p>
