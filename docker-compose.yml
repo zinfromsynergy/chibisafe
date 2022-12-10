@@ -12,8 +12,8 @@ services:
         image: rapphy243/chibisafe #Tag Docker Image
         container_name: chibisafe #Name container name
         volumes:
-            - ./chibisafe-data:/usr/chibisafe/uploads
-            - ./chibisafe-database:/usr/chibisafe/database
+            - /mnt/docker/zin/chibisafe-data:/usr/chibisafe/uploads
+            - /mnt/docker/zin/chibisafe-database:/usr/chibisafe/database
         ports: #You still should have a reverse proxy pointing to the container. Connecting to it through localhost or any other means might/will probably give you issues.
             - 5051:5000
         hostname: tempocraft
